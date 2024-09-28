@@ -1,0 +1,25 @@
+<div class="row">
+  @if (isLoader) {
+  <div class="d-flex justify-content-center mx-2">
+    <div class="spinner-border" role="status"></div>
+    <p class="sr-only">Loading...</p>
+  </div>
+  } @else {
+  <div class="col-12">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Sr.No</th>
+          <th>Roles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let role of roleList; let srno = index">
+          <td>{{ srno + 1 }}</td>
+          <td>{{ role.role }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  }
+</div>
